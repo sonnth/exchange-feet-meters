@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function lengthConverter(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputMeters").innerHTML = 0.305 * valNum ;
+        }
+    </script>
+</head>
+<body>
+<p>
+    <label>Feet</label>
+    <input id="inputFeet" type="number" placeholder="Feet"
+           oninput="lengthConverter(this.value)"
+           onchange="lengthConverter(this.value)">
+</p>
+<p>Meters: <span id="outputMeters"></span></p>
+</body>
+</html>
